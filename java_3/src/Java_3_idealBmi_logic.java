@@ -1,13 +1,21 @@
 
 public class Java_3_idealBmi_logic {
 	public static void printData(double height, double weight) {
-		double idealBmi = 22.0;
+		double idealBmiMen = 22.0;
+		double idealBmiWomen = 20.0;
 		System.out.println("身長は" + height + "cmです");
 		System.out.println("体重は" + weight + "kgです");
 		double currentBmi = currentBmi(height, weight);
 		System.out.println("現在のBMIは" + String.format("%.2f", currentBmi) + "です");
-		System.out.println("理想のBMIは" + idealBmi + "です");
-		double targetWeight = targetWeight(height, weight, idealBmi);
+		
+		if (sex = "男") {
+			System.out.println("理想のBMIは" + idealBmiMen + "です");
+		} else {
+			System.out.println("理想のBMIは" + idealBmiWomen + "です");
+		}
+		
+		System.out.println("理想のBMIは" + idealBmiMen + "です");
+		double targetWeight = targetWeight(height, weight, idealBmiMen);
 		System.out.println("理想のBMIになる適正体重は" + String.format("%.2f", targetWeight) + "kgです");
 		double untilTargetWeight = untilTargetWeight(weight, targetWeight);
 		System.out.println("適正体重より" + String.format("%.2f", untilTargetWeight) + "kg必要です");

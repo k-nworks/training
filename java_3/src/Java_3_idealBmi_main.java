@@ -5,6 +5,9 @@ public class Java_3_idealBmi_main {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
+		System.out.print("性別:");
+		String sex = scanner.next();
+		
 		System.out.print("身長(cm):");
 		double height = scanner.nextDouble();
 		
@@ -13,6 +16,6 @@ public class Java_3_idealBmi_main {
 		
 		scanner.close();
 		
-		Java_3_idealBmi_logic.printData(height, weight);
+		Java_3_idealBmi_logic.printData(height, weight, sex);
 	}
 }
