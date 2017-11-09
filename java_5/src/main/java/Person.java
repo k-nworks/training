@@ -1,5 +1,7 @@
 package main.java;
 
+//import java.util.Date;
+
 public class Person {
 	private String firstName;
 	private String middleName;
@@ -43,5 +45,18 @@ public class Person {
 	public double bmi() {
 		return this.weight / this.height / this.height;
 	}
+
+	public int getMoney() {
+		return this.money;
+	}
+	
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	
+	// 人で購入処理時に使用
+//	public void buy(int quantity, Item item, Store store, Date date) {
+//		store.purchase(quantity, item, this, date);
+//	}
 
 }

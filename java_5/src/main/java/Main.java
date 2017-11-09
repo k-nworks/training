@@ -1,5 +1,6 @@
 package main.java;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -14,41 +15,41 @@ public class Main {
 		Drink drink = new Drink("エビアン", 100, 150);
 		Book book = new Book("はじめてのRuby", 1800, 60);
 		
-		Store store1 = new Store();
-		
-		store1.setCustomer(store1);
-		store1.buy(food);
-		
-		store.setCustomer(person2);
-		person2.buy(drink);
-		
-		store.setCustomer(person3);
-		person3.buy(book);
+		Store store = new Store();
+		Date date = new Date();
 		
 		System.out.println("【食品の情報】");
 	    food.printData();
-	    
 	    System.out.println("-----------------");
-	    
-	    System.out.print("購入数を入力してください：");
-		int itemNumber = scanner.nextInt();
-		store.purchase(itemNumber);
-		store.printPurchaser();
-		store.getCustomer().printData();
-	    
+	    System.out.print("数量を入力してください：");
+		int quantity = scanner.nextInt();
+		// Storeで購入処理
+		store.purchase(quantity, food, person1, date);
+		
+		// Personで購入処理
+//		person1.buy(quantity, food, store);
+		
 		System.out.println("=================");
 	    
-//	    System.out.println("【飲料品の情報】");
-//	    store.printData();
-//	    store.printPurchaser();
-//	    store.getCustomer().printData();
-//		
-//	    System.out.println("=================");
-//	    
-//	    System.out.println("【本の情報】");
-//	    book.printData();
-//	    book.printPurchaser();
-//		book.getCustomer().printData();
+	    System.out.println("【飲料品の情報】");
+	    drink.printData();
+	    System.out.println("-----------------");
+	    System.out.print("数量を入力してください：");
+		quantity = scanner.nextInt();
+		store.purchase(quantity, drink, person2, date);
+		
+	    System.out.println("=================");
+	    
+	    System.out.println("【本の情報】");
+	    book.printData();
+	    System.out.println("-----------------");
+	    System.out.print("数量を入力してください：");
+		quantity = scanner.nextInt();
+		store.purchase(quantity, book, person3, date);
+		
+		System.out.println("=================");
+		
+//		store.history(quantity, item, person);
 		
 		scanner.close();
 	}
