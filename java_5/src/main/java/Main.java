@@ -51,7 +51,11 @@ public class Main {
 		
 //		store.history(quantity, item, person);
 		
+		
 		scanner.close();
 	}
 
 }
+
+
+

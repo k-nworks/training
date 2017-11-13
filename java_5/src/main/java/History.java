@@ -2,6 +2,8 @@ package main.java;
 
 import java.util.Date;
 
+import com.sun.tools.javac.util.List;
+
 public class History {
 	private Main quantity;
 	private Item item;
@@ -9,7 +11,15 @@ public class History {
 	private Date date;
 
 	public void history(Store purchase) {
-		this.history = history(purchase);
+		// if文で3回目に出力する
+		System.out.println();
+		
+		// 配列の配列を作る
+//		List test = [];\
+//		for(i=0;i<purchase.Length;i++) {
+//			test.apeend(purchase[i]);
+//		};
+		
 	}
 
 	public Main getQuantity() {

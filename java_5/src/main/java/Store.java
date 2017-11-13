@@ -46,6 +46,9 @@ public class Store {
 		System.out.println("-----------------");
 		System.out.println("【店舗の情報】");
 		System.out.println("在庫数：" + item.getStock() + " → " + this.stock);
+		// 配列を定義する　1個の購入情報を格納する
+		List 
+		History history = new History(purchase);
 	}
 
 }
