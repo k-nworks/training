@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FizzBuzz</title>
+</head>
+<body>
+  <!-- <div class="fizzbuzz1">
+    <script>
+    function fizzbuzz1() {
+      for (var i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 ===0) {
+          document.write("FizzBuzz" + "<br>");
+        } else if (i % 3 === 0) {
+          document.write("Fizz" + "<br>");
+        } else if (i % 5 === 0) {
+          document.write("Buzz" + "<br>");
+        } else {
+          document.write(i + "<br>");
+        }
+      }
+    }
+    fizzbuzz1();
+    </script>
+  </div> -->
+  <div class="fizzbuzz2">
+    <script>
+    function fizzbuzz2() {
+      for (i = 1; i <= 100; i++) {
+        if (i % 3 == 0) {
+          if (i % 5 == 0) {
+            document.write("FizzBuzz" + "<br>");
+          } else {
+            document.write("Fizz" + "<br>");
+          }
+        } else if (i % 5 == 0) {
+          if (i % 3 == 0) {
+            document.write("FizzBuzz" + "<br>");
+          } else {
+            document.write("Buzz" + "<br>");
+          }
+        } else {
+          document.write(i + "<br>");
+        }
+      }
+    }
+    fizzbuzz2();
+    </script>
+  </div>
+</body>
+</html>
