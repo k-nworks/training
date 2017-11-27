@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hello JSON</title>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+</head>
+<body>
+<div>
+    <div class="label">Message : </div>
+    <div class="message"></div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $.ajax({
+            url: '/json',
+            method: 'get',
+            cache: false
+        }).then(function(data) {
+            $('.message').text(data.message);
+        });
+    });
+</script>
+</html>
