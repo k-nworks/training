@@ -1,9 +1,12 @@
 package com.example.demo;
 
-        import org.springframework.stereotype.Controller;
-        import org.springframework.ui.Model;
-        import org.springframework.web.bind.annotation.RequestMapping;
-        import org.springframework.web.servlet.ModelAndView;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
 
 @Controller
 public class MainController {
@@ -17,12 +20,6 @@ public class MainController {
         return "login";
     }
 
-    @RequestMapping("/index")
-    public String main(Model model) {
-        model.addAttribute("target", "Japan");
-        return "index";
-    }
-
     @RequestMapping("/info")
     public ModelAndView info() {
         ModelAndView mav = new ModelAndView();
@@ -34,6 +31,18 @@ public class MainController {
     @RequestMapping("/jquery-ajax")
     public String jquery(Model model) {
         return "jquery-ajax";
+    }
+
+    @RequestMapping("/index")
+    public String index(Model model) {
+        model.addAttribute("message", "こんばんは");
+        return "index";
+    }
+
+    @RequestMapping(name = "/index", method = RequestMethod.POST)
+    public String nameToMessage(@RequestParam("name") String name, Model model) {
+        model.addAttribute("message", "こんばんは" + name + "さん");
+        return "index";
     }
 
 }

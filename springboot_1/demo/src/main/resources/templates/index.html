@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>Index</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <title>SpringBootTraining</title>
 </head>
 <body>
-    <div class="container">
-        <div th:text="'Hello, ' + ${target} + '.'"></div>
-    </div>
+    <span th:text="${message}">Hello world</span>
+    <form action="/" method="POST">
+        <input name="name" type="text" /><br/>
+        <input type="submit" />
+    </form>
 </body>
 </html>
